@@ -8,7 +8,7 @@ import {
   FaLinkedin,
   FaPowerOff,
 } from "react-icons/fa";
-import { Container, Typography, Box, Button } from "@mui/material";
+// import { Container, Typography, Box, Button } from "@mui/material";
 
 import { MdEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
@@ -82,10 +82,10 @@ const Home: React.FC = () => {
                   <h3>Secure and Private</h3>
                   <p>Your privacy and security are our top priority.</p>
                 </div>
-                <div className="feature">
+                {/* <div className="feature">
                   <h3>Easy to Use</h3>
                   <p>Our platform is user-friendly and easy to navigate.</p>
-                </div>
+                </div> */}
               </div>
             </section>
 
