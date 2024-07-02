@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+.home-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.right-section {
+  width: 66.67%;
+  background-color: #130219;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-section {
+  width: 33.33%;
+  background: url("../Assets/Celebrities Looks.jpeg") no-repeat center center;
+  background-size: cover;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+  left: 330px;
+  width: 50%;
+}
+.name {
+  font-family: "Italianno", cursive;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 58px;
+  margin: 0 auto;
+  position: fixed;
+  left: 70px;
+  bottom: 400px;
+}
+.subscribe-btn {
+  position: relative;
+  top: 20px;
+  background-color: transparent;
+  color: #f3f3f3;
+  border: 2px solid #ebebeb;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+}
+
+.subscribe-btn:hover {
+  background-color: #ffffff;
+  color: #130219;
+}
+
+.social-icons1 {
+  display: flex;
+  gap: 40px;
+  position: relative;
+  right: 15px;
+  top: 22px;
+}
+
+.social-icons1 svg {
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icons1 svg:hover {
+  transform: scale(1.5);
+}
+
+.tag a svg{
+  text-decoration: none; /* Remove underline from the link */
+  position: relative;
+  top: 50px;
+  left: 300px;
+  color: #130219;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out; /* Smooth transitions */
+}
+
+.tag a:hover svg {
+  transform: scale(1.5);
+  color: #280b33;
+}
+
+
