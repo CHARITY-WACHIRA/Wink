@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
 .portfolio-container {
   display: flex;
   height: 100vh;
@@ -76,12 +76,12 @@
 }
 
 .tag a svg{
-  text-decoration: none; /* Remove underline from the link */
+  text-decoration: none; 
   position: relative;
   top: 50px;
   left: 300px;
   color: #130219;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out; /* Smooth transitions */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out; 
 }
 
 .tag a:hover svg {
@@ -89,4 +89,4 @@
   color: #280b33;
 }
 
-
+ */

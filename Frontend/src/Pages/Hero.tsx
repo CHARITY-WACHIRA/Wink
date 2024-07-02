@@ -6,7 +6,8 @@ import {
   FaLinkedin,
   FaRegCopyright,
 } from "react-icons/fa";
-
+import winkLogo from "../Assets/winklogopic.png";
+import Logo from "../Assets/wink-transparent.png";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { FaXTwitter } from "react-icons/fa6";
@@ -22,13 +23,17 @@ const Hero: React.FC = () => {
     <div className="hero-container">
       <div className="left-section"></div>
       <div className="right-section">
-        <video autoPlay muted loop className="background-video">
-          <source src="/src/assets/edium.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        
         <div className="top-nav1">
-          <button className="subscribe-btn">Subscribe</button>
-          <div className="social-icons">
+        
+        <div className="name1">
+          <img src={winkLogo} alt="Wink logo" />
+          <img src={Logo} alt="logo" style={{ maxWidth: '120px', height: '70px' }}/>
+
+        </div>
+      
+        <div className="top-nav">
+          <div className="social-icons1">
             <a
               href="https://www.facebook.com/victor.maina.77312/"
               target="_blank"
@@ -63,6 +68,10 @@ const Hero: React.FC = () => {
               <MdEmail size={24} />
             </a>
           </div>
+          {/* <button className="subscribe-btn">Subscribe</button> */}
+        </div>
+    
+    
         </div>
         <div className="content-section">
           <div className="vertical-links">
