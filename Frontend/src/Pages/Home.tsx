@@ -16,7 +16,8 @@ import { FaXTwitter } from "react-icons/fa6";
 const Home: React.FC = () => {
   return (
     <div className="home-container">
-      <div className="right-section">
+      <div className="left-section">
+        <div className="semi-nav">
         <div className="name1">
           <img src={winkLogo} alt="Wink logo" />
           <img
@@ -61,7 +62,11 @@ const Home: React.FC = () => {
               rel="noopener noreferrer">
               <MdEmail size={24} />
             </a>
+            <a href="/" rel="noopener noreferrer">
+            <FaPowerOff size={28} />
+          </a>
           </div>
+        </div>
         </div>
 
         <div className="content">
@@ -102,11 +107,11 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <div className="left-section">
+      <div className="right-section">
         <div className="tag">
-          <a href="/" rel="noopener noreferrer">
+          {/* <a href="/" rel="noopener noreferrer">
             <FaPowerOff size={32} />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

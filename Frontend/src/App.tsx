@@ -6,11 +6,14 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Portfolio from "./Pages/Portfolio";
+import Loading from "./Pages/Loading";
+import Login from "./Pages/Login";
 
 const App: React.FC = () => {
   return (
     <Routes>
-      <Route path="/" element={<Hero />} />
+      <Route path="/" element={<Loading />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/home" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
