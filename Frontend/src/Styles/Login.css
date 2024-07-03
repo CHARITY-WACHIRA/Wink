@@ -5,7 +5,9 @@
     justify-content: center;
     height: 100vh;
     background: rgb(0,0,0);
-    background: linear-gradient(27deg, rgba(0,0,0,1) 0%, rgba(43,5,18,1) 28%, rgba(65,12,69,1) 85%, rgba(200,23,83,1) 100%);
+    background: linear-gradient(to top, #890e0e, #870021, #810031, #77003e, #6a054a, #5d0c45, #501040, #44123a, #371029, #280e1c, #1a0810, #000000);
+    backdrop-filter: blur(10px);
+    color: white;
   }
   
   .card-container {
@@ -23,27 +25,49 @@
   }
   
   .card.active {
-    background-color: #ebe5e5;
+    background-color: rgba(235, 229, 229, 0.5); /* Make the card transparent */
     transform: scale(1.05);
-  }
+}
+
   
   .card.inactive {
-    background-color: #cccccc;
+    background-color: #635f5f;
     transform: scale(1);
     opacity: 0.6;
   }
   
-  .toggle-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #4caf50;
+  .card h2 {
+    margin-bottom: 20px;
+}
+
+.card form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card label {
+    margin-bottom: 8px;
+}
+
+.card input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.card button {
+    padding: 10px;
+    background-color: #6a054a;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .toggle-button:hover {
-    background-color: #45a049;
-  }
-  
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #501040;
+}
+ 

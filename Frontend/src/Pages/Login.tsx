@@ -31,7 +31,24 @@ const Login: React.FC = () => {
           onClick={() => selectCard('signup')}
         >
           <h2>Sign Up</h2>
-          {/* Your sign-up form goes here */}
+          <form>
+    <label htmlFor="name">Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label htmlFor="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label htmlFor="username">Username</label>
+    <input type="text" id="signup-username" name="username" required />
+
+    <label htmlFor="password">Password</label>
+    <input type="password" id="signup-password" name="password" required />
+
+    <label htmlFor="confirm-password">Confirm Password</label>
+    <input type="password" id="confirm-password" name="confirm-password" required />
+
+    <button type="submit">Sign Up</button>
+  </form>
         </div>
       </div>
     </div>

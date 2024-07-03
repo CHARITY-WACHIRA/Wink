@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -20,13 +21,7 @@ body, html {
 
 .left-section {
   width: 66.67%;
-  background: linear-gradient(
-    27deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(43, 5, 18, 1) 28%,
-    rgba(65, 12, 69, 1) 85%,
-    rgba(200, 23, 83, 1) 100%
-  );
+  background: linear-gradient(to top, #890e0e, #870021, #810031, #77003e, #6a054a, #5d0c45, #501040, #44123a, #371029, #280e1c, #1a0810, #000000);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -66,12 +61,12 @@ body, html {
 }
 
 .name1::-webkit-scrollbar {
-  display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .name1 {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .name1 img {
