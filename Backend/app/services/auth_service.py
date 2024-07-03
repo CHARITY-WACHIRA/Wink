@@ -1,9 +1,9 @@
-from werkzeug.security import generate_password_hash, check_password_hash
+from flask_bcrypt import generate_password_hash, check_password_hash
 from ..models import User
 from .. import db
 
 def register_user(data):
-    hashed_password = generate_password_hash(data['password'], method='pbkdf2:sha256')
+    hashed_password = generate_password_hash(data['password']).decode('utf-8')
     new_user = User(username=data['username'], password=hashed_password, gender=data['gender'], preferences=data['preferences'])
     db.session.add(new_user)
     db.session.commit()
