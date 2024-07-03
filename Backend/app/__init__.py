@@ -18,8 +18,9 @@ def create_app():
     
     
     with app.app_context():
-        from .routes import auth, swipe, chat
+        from .routes import auth, profile, swipe, chat
         app.register_blueprint(auth.bp)
+        app.register_blueprint(profile.bp)
         app.register_blueprint(swipe.bp)
         app.register_blueprint(chat.bp)
         
