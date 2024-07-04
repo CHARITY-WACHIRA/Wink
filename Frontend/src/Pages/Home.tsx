@@ -1,67 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/Home.css";
+import Sidebar from "./Sidebar";
 import winkLogo from "../Assets/winklogopic.png";
 import Logo from "../Assets/wink-transparent.png";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaPowerOff,
-} from "react-icons/fa";
-// import { Container, Typography, Box, Button } from "@mui/material";
+import { GiFlame } from "react-icons/gi";
+import { BiSolidMessageRounded } from "react-icons/bi";
+import { MdAccountCircle } from "react-icons/md"; 
+import { IoMdNotificationsOutline } from "react-icons/io";
 
-import { MdEmail } from "react-icons/md";
-import { FaXTwitter } from "react-icons/fa6";
 
 const Home: React.FC = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const menuItems = ['Account', 'Settings', 'Payment', 'Logout'];
+
   return (
     <div className="home-container">
+      <Sidebar menuItems={menuItems} isOpen={isSidebarOpen} onClose={toggleSidebar} />
       <div className="left-section">
         <div className="semi-nav">
-        <div className="name1">
-          <img src={winkLogo} alt="Wink logo" />
-          <img
-            src={Logo}
-            alt="logo"
-            style={{ maxWidth: "120px", height: "70px" }}
-          />
-        </div>
-
-        <div className="top-nav">
-          <div className="social-icons1">
-            <a
-              href="https://www.facebook.com/victor.maina.77312/"
-              target="_blank"
-              rel="noopener noreferrer">
-              <FaFacebook size={24} />
-            </a>
-            <a
-              href="https://www.instagram.com/smigthereason/"
-              target="_blank"
-              rel="noopener noreferrer">
-              <FaInstagram size={24} />
-            </a>
-
-            <a
-              href="https://x.com/SmigDs"
-              target="_blank"
-              rel="noopener noreferrer">
-              <FaXTwitter size={24} />
-            </a>
-
-            
-
-            <a
-              href="mailto:victor.dmaina@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer">
-              <MdEmail size={24} />
-            </a>
-            <a href="/" rel="noopener noreferrer">
-            <FaPowerOff size={28} />
-          </a>
+          <div className="name1">
+            <img src={winkLogo} alt="Wink logo" />
+            <img
+              src={Logo}
+              alt="logo"
+              style={{ maxWidth: "120px", height: "70px" }}
+            />
           </div>
-        </div>
         </div>
 
         <div className="content">
@@ -82,28 +51,40 @@ const Home: React.FC = () => {
                   <h3>Secure and Private</h3>
                   <p>Your privacy and security are our top priority.</p>
                 </div>
-                {/* <div className="feature">
-                  <h3>Easy to Use</h3>
-                  <p>Our platform is user-friendly and easy to navigate.</p>
-                </div> */}
               </div>
             </section>
-
-            {/* <section className="cta-section">
-              <h2>Get Started</h2>
-              <p>
-                Join thousands of others in finding their perfect match. Sign up
-                now and start your journey to finding love!
-              </p>
-              <button className="cta-button">Sign Up</button>
-            </section> */}
-
           </div>
         </div>
       </div>
 
       <div className="right-section">
-      <div className="container">
+        <div className="container">
+          <div className="top-nav">
+            <div className="social-icons1">
+              <a
+                href="https://www.facebook.com/victor.maina.77312/"
+                target="_blank"
+                rel="noopener noreferrer">
+                <GiFlame size={32} />
+              </a>
+              <a
+                href="https://www.instagram.com/smigthereason/"
+                target="_blank"
+                rel="noopener noreferrer">
+                <BiSolidMessageRounded  size={32} />
+              </a>
+              <a
+                href="https://x.com/SmigDs"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IoMdNotificationsOutline  size={32} />
+              </a>
+              
+              <button onClick={toggleSidebar} className="account-button">
+                <MdAccountCircle size={32} />
+              </button>
+            </div>
+          </div>
     
     <div className="grid">
       <div className="card1">
@@ -112,9 +93,8 @@ const Home: React.FC = () => {
         </div>
         <div className="card-overlay1"></div>
         <div className="card-content1">
-          <h1>Beauty</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
-          <button>See More</button>
+        <h2>Searching for Your Soulmate</h2>
+
         </div>
       </div>
       <div className="card1">
@@ -123,9 +103,8 @@ const Home: React.FC = () => {
         </div>
         <div className="card-overlay1"></div>
         <div className="card-content1">
-          <h1>Beauty</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
-          <button>See More</button>
+        <h2>Night Owl Adventures</h2>
+
         </div>
       </div>
       <div className="card1">
@@ -134,9 +113,8 @@ const Home: React.FC = () => {
         </div>
         <div className="card-overlay1"></div>
         <div className="card-content1">
-          <h1>Beauty</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
-          <button>See More</button>
+        <h2>Discover People</h2>
+
         </div>
       </div>
       <div className="card1">
@@ -145,9 +123,8 @@ const Home: React.FC = () => {
         </div>
         <div className="card-overlay1"></div>
         <div className="card-content1">
-          <h1>Beauty</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
-          <button>See More</button>
+        <h2>Thrill Seekers Unite</h2>
+
         </div>
       </div>
       <div className="card1">
@@ -156,9 +133,8 @@ const Home: React.FC = () => {
         </div>
         <div className="card-overlay1"></div>
         <div className="card-content1">
-          <h1>Beyond Builder</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
-          <button>See More</button>
+        <h2>Foodies Delight</h2>
+
         </div>
       </div>
       <div className="card1">
@@ -167,9 +143,8 @@ const Home: React.FC = () => {
         </div>
         <div className="card-overlay1"></div>
         <div className="card-content1">
-          <h1>Shooting Star</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
-          <button>See More</button>
+        <h2>Creative Souls</h2>
+
         </div>
       </div>
     </div>
