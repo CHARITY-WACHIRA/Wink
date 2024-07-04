@@ -4,7 +4,21 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background: linear-gradient(
+    to top,
+    #890e0e,
+    #870021,
+    #810031,
+    #77003e,
+    #6a054a,
+    #5d0c45,
+    #501040,
+    #44123a,
+    #371029,
+    #280e1c,
+    #1a0810,
+    #000000
+  );
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
